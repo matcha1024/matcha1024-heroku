@@ -19,7 +19,8 @@ def index():
 	</form>
 	<body>
 		<h1>使い方</h1>
-		<p>1.midiファイルをアップロードして、ダウンロードされたnote.zipを解凍します。\n2.フォルダ:noteをマインクラフトのdatapackフォルダに入れます。\n3.マインクラフト内で/function note:startを実行することで演奏が開始します。
+		<p>1.midiファイルをアップロードして、ダウンロードされたnote.zipを解凍します。\n2.フォルダ:noteをマインクラフトのdatapackフォルダに入れます。\n3.マインクラフト内で/function note:startを実行することで演奏が開始します。</p>
+		<p>midiファイルが長い場合、マインクラフトがデータパックを読み込めない可能性があります。</p>
 '''
 
 @app.route('/upload', methods=['POST'])
