@@ -13,6 +13,9 @@ app = flask.Flask(__name__)
 @app.route('/', methods=['GET'])
 def index():
 	return '''
+	<head>
+		<link rel=”icon” href=“./favicon.ico”>
+	</head>
 	<title>MC Note Functioner</title>
 	<form method="post" action="/upload" enctype="multipart/form-data">
 	  <input type="file" name="file">
@@ -21,7 +24,7 @@ def index():
 	<body>
 		<h1>使い方</h1>
 		<p>1.midiファイルをアップロードして、ダウンロードされたnote.zipを解凍します。\n2.フォルダ:noteをマインクラフトのdatapackフォルダに入れます。\n3.マインクラフト内で/function note:startを実行することで演奏が開始します。</p>
-		<p>midiファイルが長い場合、マインクラフトがデータパックを読み込めない可能性があります。</p>
+		<p>アップデート：演奏が開始されないバグを修正しました。2021/01/18/0:21</p>
 		<p>YouTube:</p>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/vcqT1Di1CDM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 '''
@@ -33,7 +36,7 @@ def upload():
 	fs = flask.request.files['file']
 	fs.save("./midi_file.mid")
 
-	PITCH = {0:0.66, 1:0.70, 2:0.74, 3:0.78, 4:0.84, 5:0.89, 6:0.5, 7:0.53, 8:0.56, 9:0.59, 10:0.62, 11:0.66, 12:0.7, 13:0.74, 14:0.8, 15:0.84, 16:0.9, 17:0.95, 18:1, 19:1.05, 20:1.13, 21:1.18, 22:1.25, 23:1.33, 24:1.4, 25:1.5, 26:1.57, 27:1.67, 28:1.8, 29:1.9, 30:3, 31:1.05, 32:1.13, 33:1.18, 34:1.25, 35:1.33}
+	PITCH = {0:0.66, 1:0.70, 2:0.74, 3:0.78, 4:0.84, 5:0.89, 6:0.5, 7:0.53, 8:0.56, 9:0.59, 10:0.62, 11:0.66, 12:0.7, 13:0.74, 14:0.8, 15:0.84, 16:0.9, 17:0.95, 18:1, 19:1.05, 20:1.13, 21:1.18, 22:1.25, 23:1.33, 24:1.4, 25:1.5, 26:1.57, 27:1.67, 28:1.8, 29:1.9, 30:2, 31:1.05, 32:1.13, 33:1.18, 34:1.25, 35:1.33}
 
 	midi_data = pretty_midi.PrettyMIDI("./midi_file.mid")
 
