@@ -22,6 +22,8 @@ def index():
 		<h1>使い方</h1>
 		<p>1.midiファイルをアップロードして、ダウンロードされたnote.zipを解凍します。\n2.フォルダ:noteをマインクラフトのdatapackフォルダに入れます。\n3.マインクラフト内で/function note:startを実行することで演奏が開始します。</p>
 		<p>midiファイルが長い場合、マインクラフトがデータパックを読み込めない可能性があります。</p>
+		<p>YouTube:</p>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/vcqT1Di1CDM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 '''
 
 @app.route('/upload', methods=['POST'])
