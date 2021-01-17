@@ -24,9 +24,10 @@ def index():
 	<body>
 		<h1>使い方</h1>
 		<p>1.midiファイルをアップロードして、ダウンロードされたnote.zipを解凍します。</p>2.フォルダ:noteをマインクラフトのdatapackフォルダに入れます。</p>3.マインクラフト内で/function note:startを実行することで演奏が開始します。</p>
-		<p>アップデート：演奏が開始されないバグを修正しました。2021/01/18/0:21</p>
-		<p>アップデート：音程を改善しました。2021/01/18/1:26</p>
-		<p>アップデート：note:stopを追加しました。2021/01/18/1:26</p>
+		<h1>アップデート</h1>
+		<p>2021/01/18/0:21：演奏が開始されないバグを修正しました。</p>
+		<p>2021/01/18/1:26：音程を改善しました。</p>
+		<p>2021/01/18/1:26：note:stopを追加しました。</p>
 		<p>YouTube:</p>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/vcqT1Di1CDM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 '''
