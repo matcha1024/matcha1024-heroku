@@ -30,6 +30,8 @@ def index():
 		<p>2021/01/18/1:26：note:stopを追加しました。</p>
 		<h1>YouTube:</h1>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/vcqT1Di1CDM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<h1>Contact Me</h1>
+		<a href="https://twitter.com/matcha_1024">TwitterDMまで</a>
 '''
 
 @app.route('/upload', methods=['POST'])
