@@ -17,6 +17,9 @@ def index():
 	  <input type="file" name="file">
 	  <button>upload</button>
 	</form>
+	<body>
+		<h1>使い方</h1>
+		<p>1.midiファイルをアップロードして、ダウンロードされたnote.zipを解凍します。\n2.フォルダ:noteをマインクラフトのdatapackフォルダに入れます。\n3.マインクラフト内で/function note:startを実行することで演奏が開始します。
 '''
 
 @app.route('/upload', methods=['POST'])
