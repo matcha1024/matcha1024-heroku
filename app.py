@@ -13,6 +13,7 @@ app = flask.Flask(__name__)
 @app.route('/', methods=['GET'])
 def index():
 	return '''
+	<title>MC Note Functioner</title>
 	<form method="post" action="/upload" enctype="multipart/form-data">
 	  <input type="file" name="file">
 	  <button>upload</button>
