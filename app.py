@@ -14,24 +14,212 @@ app = flask.Flask(__name__)
 def index():
 	return '''
 	<head>
-		<link rel=”icon” href=“./favicon.ico”>
-	</head>
+		<link rel="icon" href="./favicon.ico">
+		<style>
+		@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Exo', sans-serif;
+}
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    top:10vh;
+    text-align: center;
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+.context h2{
+    text-align: center;
+    font-size: 30px;
+}
+
+.context iframe{
+    text-align: center;
+}
+
+.context a{
+	color: #00FF00;
+    text-align: center;
+    font-size: 30px;
+}
+
+.area{
+	pointer-events: none;
+    background: #4e54c8;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    height:200vh;
+    
+   
+}
+
+.circles{
+	pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+</style>
 	<title>MC Note Functioner</title>
+	</head>
+	<body>
+	<div class="context">
 	<form method="post" action="/upload" enctype="multipart/form-data">
 	  <input type="file" name="file">
 	  <button>upload</button>
 	</form>
-	<body>
 		<h1>使い方</h1>
-		<p>1.midiファイルをアップロードして、ダウンロードされたnote.zipを解凍します。</p>2.フォルダ:noteをマインクラフトのdatapackフォルダに入れます。</p>3.マインクラフト内で/function note:startを実行することで演奏が開始します。</p>4./function note:stopを実行することで演奏が停止します。</p>
+		<h2>1.midiファイルをアップロードして、ダウンロードされたnote.zipを解凍します。</h2>
+		<h2>2.フォルダ:noteをマインクラフトのdatapackフォルダに入れます。</h2>
+		<h2>3.マインクラフト内で/function note:startを実行することで演奏が開始します。</h2>
+		<h2>4./function note:stopを実行することで演奏が停止します。</h2>
 		<h1>アップデート</h1>
-		<p>2021/01/18/0:21：演奏が開始されないバグを修正しました。</p>
-		<p>2021/01/18/1:26：音程を改善しました。</p>
+		<h2>2021/01/18/0:21：演奏が開始されないバグを修正しました。</h2>
+		<h2>2021/01/18/1:26：音程を改善しました。<h2>
 		<p>2021/01/18/1:26：note:stopを追加しました。</p>
 		<h1>YouTube:</h1>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/vcqT1Di1CDM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		<h1>Contact Me</h1>
 		<a href="https://twitter.com/matcha_1024">TwitterDMまで</a>
+		</div>
+		<div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
+    </body>
 '''
 
 @app.route('/upload', methods=['POST'])
