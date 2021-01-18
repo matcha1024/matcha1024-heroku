@@ -19,6 +19,35 @@ def index():
 		@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
 
+button {
+    /* 文字サイズを1.4emに指定 */
+    font-size: 1.4em;
+
+    /* 文字の太さをboldに指定 */
+    font-weight: bold;
+
+    /* 縦方向に10px、
+     * 横方向に30pxの余白を指定 */
+    padding: 10px 30px;
+
+    /* 背景色を濃い青色に指定 */
+    background-color: #248;
+
+    /* 文字色を白色に指定 */
+    color: #fff;
+
+    /* ボーダーをなくす */
+    border-style: none;
+}
+
+button:hover {
+    /* 背景色を明るい青色に指定 */
+    background-color: #24d;
+
+    /* 文字色を白色に指定 */
+    color: #fff;
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -189,7 +218,7 @@ body{
 	<div class="context">
 	<form method="post" action="/upload" enctype="multipart/form-data">
 	  <input type="file" name="file">
-	  <button>upload</button>
+	  <button>Upload</button>
 	</form>
 		<h1>使い方</h1>
 		<h2>1.midiファイルをアップロードして、ダウンロードされたnote.zipを解凍します。</h2>
