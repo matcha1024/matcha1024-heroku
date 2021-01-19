@@ -14,6 +14,7 @@ app = flask.Flask(__name__)
 def index():
 	return '''
 	<head>
+    <meta name="description" content="Minecraftの音ブロック演奏を自動生成します。">
 		<style>
 		@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
