@@ -411,6 +411,8 @@ body{
 	</head>
 	<body>
 	<div class="context">
+    <a href="https://www.free-counter.jp/"><img src="https://www.f-counter.net/j/45/1611140767/" alt="アクセスカウンター"></a>
+
 	<form method="post" action="/upload" enctype="multipart/form-data">
 	  <input type="file" name="file">
 	  <button>Upload</button>
