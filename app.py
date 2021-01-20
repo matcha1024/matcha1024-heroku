@@ -432,7 +432,6 @@ body{
 		<p>2021/01/18/1:26：note:stopを追加しました。</p>
 		<h1>YouTube:</h1>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/vcqT1Di1CDM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		<a href="https://twitter.com/matcha_1024"><br>ご連絡はTwitterDMまで</a>
 		<h1>演奏例</h1>
 		<h2>最終鬼畜姉妹フランドール・S</h2>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/PYhc8vX1DuA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -440,7 +439,9 @@ body{
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/adPjYUovu-Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		<h2>夜明けの蛍</h2>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/KmT0csiabkE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		</div>
+        <a href="https://twitter.com/matcha_1024"><br>ご連絡はTwitterDMまで</a>
+
+        </div>
 		<div class="area" >
             <ul class="circles">
                     <li></li>
