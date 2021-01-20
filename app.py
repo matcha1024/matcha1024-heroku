@@ -81,9 +81,15 @@ body{
 }
 
 .context a{
-	color: #00FF00;
+	background-color: #248;
     text-align: center;
     font-size: 30px;
+    color:#fff
+}
+
+.context a:hover{
+    background-color: #24d;
+    color: #fff;
 }
 
 .area{
@@ -411,8 +417,6 @@ body{
 	</head>
 	<body>
 	<div class="context">
-    <a href="https://www.free-counter.jp/"><img src="https://www.f-counter.net/j/45/1611140767/" alt="アクセスカウンター"></a>
-
 	<form method="post" action="/upload" enctype="multipart/form-data">
 	  <input type="file" name="file">
 	  <button>Upload</button>
@@ -428,8 +432,7 @@ body{
 		<p>2021/01/18/1:26：note:stopを追加しました。</p>
 		<h1>YouTube:</h1>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/vcqT1Di1CDM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		<h1>Contact Me</h1>
-		<a href="https://twitter.com/matcha_1024">TwitterDMまで</a>
+		<a href="https://twitter.com/matcha_1024"><br>ご連絡はTwitterDMまで</a>
 		<h1>演奏例</h1>
 		<h2>最終鬼畜姉妹フランドール・S</h2>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/PYhc8vX1DuA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
