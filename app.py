@@ -427,9 +427,10 @@ body{
 		<h2>3.マインクラフト内で/function note:startを実行することで演奏が開始します。</h2>
 		<h2>4./function note:stopを実行することで演奏が停止します。</h2>
 		<h1>アップデート</h1>
-		<h2>2021/01/18/0:21：演奏が開始されないバグを修正しました。</h2>
-		<h2>2021/01/18/1:26：音程を改善しました。<h2>
-		<p>2021/01/18/1:26：note:stopを追加しました。</p>
+		<h2>2021/01/18/00:21：演奏が開始されないバグを修正しました。</h2>
+		<h2>2021/01/18/01:26：音程を改善しました。</h2>
+		<h2>2021/01/18/01:26：note:stopを追加しました。</h2>
+        <h2>2021/01/21/20:01：サイトの読み込み速度を改善しました。</h2>
 		<h1>YouTube:</h1>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/vcqT1Di1CDM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		<h1>演奏例</h1>
