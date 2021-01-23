@@ -1,6 +1,7 @@
 scoreboard players add Timer TICK 1
 scoreboard players operation Timer TICK %= Timer 20
 execute if score Timer TICK matches 0 unless score Timer SECOND matches -1 run scoreboard players add Timer SECOND 1
+execute if score Timer LOOP matches 1 if score Timer SECOND matches 4080 run function note:start
 execute at @a run execute if score Timer SECOND matches 0 run playsound minecraft:block.note_block.harp master @a ~ ~ ~ 1 1.05
 execute at @a run execute if score Timer SECOND matches 10 run playsound minecraft:block.note_block.harp master @a ~ ~ ~ 1 1.05
 execute at @a run execute if score Timer SECOND matches 20 run playsound minecraft:block.note_block.harp master @a ~ ~ ~ 1 1.57

@@ -12,11 +12,11 @@ app = flask.Flask(__name__)
 # フォーム表示
 @app.route('/', methods=['GET'])
 def index():
-	return '''
-	<head>
+    return '''
+    <head>
     <meta name="description" content="Minecraftの音ブロック演奏を自動生成します。">
-		<style>
-		@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+        <style>
+        @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
 
 button {
@@ -81,7 +81,7 @@ body{
 }
 
 .context a{
-	background-color: #248;
+    background-color: #248;
     text-align: center;
     font-size: 30px;
     color:#fff
@@ -93,7 +93,7 @@ body{
 }
 
 .area{
-	pointer-events: none;
+    pointer-events: none;
     background: #4e54c8;  
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
     width: 100%;
@@ -103,7 +103,7 @@ body{
 }
 
 .circles{
-	pointer-events: none;
+    pointer-events: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -413,37 +413,37 @@ body{
 
 }
 </style>
-	<title>MC Note Functioner</title>
-	</head>
-	<body>
-	<div class="context">
-	<form method="post" action="/upload" enctype="multipart/form-data">
-	  <input type="file" name="file">
-	  <button>Upload</button>
-	</form>
-		<h1>使い方</h1>
-		<h2>1.midiファイルをアップロードして、ダウンロードされたnote.zipを解凍します。</h2>
-		<h2>2.フォルダ:noteをマインクラフトのdatapackフォルダに入れます。</h2>
-		<h2>3.マインクラフト内で/function note:startを実行することで演奏が開始します。</h2>
-		<h2>4./function note:stopを実行することで演奏が停止します。</h2>
-		<h1>アップデート</h1>
-		<h2>2021/01/18/00:21：演奏が開始されないバグを修正しました。</h2>
-		<h2>2021/01/18/01:26：音程を改善しました。</h2>
-		<h2>2021/01/18/01:26：note:stopを追加しました。</h2>
+    <title>MC Note Functioner</title>
+    </head>
+    <body>
+    <div class="context">
+    <form method="post" action="/upload" enctype="multipart/form-data">
+      <input type="file" name="file">
+      <button>Upload</button>
+    </form>
+        <h1>使い方</h1>
+        <h2>1.midiファイルをアップロードして、ダウンロードされたnote.zipを解凍します。</h2>
+        <h2>2.フォルダ:noteをマインクラフトのdatapackフォルダに入れます。</h2>
+        <h2>3.マインクラフト内で/function note:startを実行することで演奏が開始します。</h2>
+        <h2>4./function note:stopを実行することで演奏が停止します。</h2>
+        <h1>アップデート</h1>
+        <h2>2021/01/18/00:21：演奏が開始されないバグを修正しました。</h2>
+        <h2>2021/01/18/01:26：音程を改善しました。</h2>
+        <h2>2021/01/18/01:26：note:stopを追加しました。</h2>
         <h2>2021/01/21/20:01：サイトの読み込み速度を改善しました。</h2>
-		<h1>YouTube:</h1>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/vcqT1Di1CDM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		<h1>演奏例</h1>
-		<h2>最終鬼畜姉妹フランドール・S</h2>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/PYhc8vX1DuA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		<h2>unravel</h2>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/adPjYUovu-Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		<h2>夜明けの蛍</h2>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/KmT0csiabkE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h1>YouTube:</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/vcqT1Di1CDM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h1>演奏例</h1>
+        <h2>最終鬼畜姉妹フランドール・S</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PYhc8vX1DuA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h2>unravel</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/adPjYUovu-Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h2>夜明けの蛍</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/KmT0csiabkE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <a href="https://twitter.com/matcha_1024"><br>ご連絡はTwitterDMまで</a>
 
         </div>
-		<div class="area" >
+        <div class="area" >
             <ul class="circles">
                     <li></li>
                     <li></li>
@@ -486,30 +486,31 @@ body{
 
 @app.route('/upload', methods=['POST'])
 def upload(): 
-	if 'file' not in flask.request.files:
-		return 'ファイル未指定'
-	fs = flask.request.files['file']
-	fs.save("./midi_file.mid")
+    if 'file' not in flask.request.files:
+        return 'ファイル未指定'
+    fs = flask.request.files['file']
+    fs.save("./midi_file.mid")
 
-	PITCH = {0:0.67, 1:0.710, 2:0.714, 3:0.718, 4:0.84, 5:0.89, 6:0.5, 7:0.53, 8:0.56, 9:0.59, 10:0.63, 11:0.67, 12:0.71, 13:0.714, 14:0.79, 15:0.84, 16:0.9, 17:0.95, 18:1, 19:1.05, 20:1.13, 21:1.18, 22:1.25, 23:1.33, 24:1.4, 25:1.5, 26:1.57, 27:1.67, 28:1.8, 29:1.9, 30:2, 31:1.05, 32:1.13, 33:1.18, 34:1.25, 35:1.33}
+    PITCH = {0:0.67, 1:0.710, 2:0.714, 3:0.718, 4:0.84, 5:0.89, 6:0.5, 7:0.53, 8:0.56, 9:0.59, 10:0.63, 11:0.67, 12:0.71, 13:0.714, 14:0.79, 15:0.84, 16:0.9, 17:0.95, 18:1, 19:1.05, 20:1.13, 21:1.18, 22:1.25, 23:1.33, 24:1.4, 25:1.5, 26:1.57, 27:1.67, 28:1.8, 29:1.9, 30:2, 31:1.05, 32:1.13, 33:1.18, 34:1.25, 35:1.33}
 
-	midi_data = pretty_midi.PrettyMIDI("./midi_file.mid")
+    midi_data = pretty_midi.PrettyMIDI("./midi_file.mid")
+    end_time = midi_data.get_end_time()
 
-	with open("./note/data/note/functions/ontick.mcfunction", "w") as f:
-		f.write("scoreboard players add Timer TICK 1\nscoreboard players operation Timer TICK %= Timer 20\nexecute if score Timer TICK matches 0 unless score Timer SECOND matches -1 run scoreboard players add Timer SECOND 1\n")
-		for instrument in midi_data.instruments:
-			if not instrument.is_drum:
-				time = instrument.get_onsets()
-				i = 0
-				for note in instrument.notes:
-					f.write(f"execute at @a run execute if score Timer SECOND matches {int(time[i]*20)} run playsound minecraft:block.note_block.harp master @a ~ ~ ~ 1 {PITCH[int(note.pitch) % 36]}\n")
+    with open("./note/data/note/functions/ontick.mcfunction", "w") as f:
+        f.write(f"scoreboard players add Timer TICK 1\nscoreboard players operation Timer TICK %= Timer 20\nexecute if score Timer TICK matches 0 unless score Timer SECOND matches -1 run scoreboard players add Timer SECOND 1\nexecute if score Timer LOOP matches 1 if score Timer SECOND matches {int(end_time * 20)} run function note:start\n")
+        for instrument in midi_data.instruments:
+            if not instrument.is_drum:
+                time = instrument.get_onsets()
+                i = 0
+                for note in instrument.notes:
+                    f.write(f"execute at @a run execute if score Timer SECOND matches {int(time[i]*20)} run playsound minecraft:block.note_block.harp master @a ~ ~ ~ 1 {PITCH[int(note.pitch) % 36]}\n")
 
-					i += 1
+                    i += 1
 
 
-	shutil.make_archive("note", "zip", root_dir = "./note")
+    shutil.make_archive("note", "zip", root_dir = "./note")
 
-	return send_file("./note.zip", as_attachment = True, \
+    return send_file("./note.zip", as_attachment = True, \
         attachment_filename = "note.zip")
 if __name__ == '__main__':
-	app.run()
+    app.run()
