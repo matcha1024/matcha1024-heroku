@@ -414,6 +414,7 @@ body{
 }
 </style>
     <title>MC Note Functioner</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/matcha1024/mc-note-functioner/master/favicon.ico">
     </head>
     <body>
     <div class="context">
