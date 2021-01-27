@@ -9,6 +9,8 @@ import shutil
 
 app = flask.Flask(__name__)
 
+app.config['MAX_CONTENT_LENGTH'] = 1 * 1024 * 1024
+
 @app.route('/', methods=['GET'])
 def index():
     return render_template("index.html")
@@ -53,5 +55,7 @@ def page_not_found(error):
 @app.errorhandler(500)
 def page_not_found(error):
     return render_template("error.html")
+
+    return render_template("413.html")
 if __name__ == '__main__':
     app.run()
