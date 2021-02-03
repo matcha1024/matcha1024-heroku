@@ -20,6 +20,15 @@ def index():
 def index2():
     return render_template("index2.html")
 
+@app.route('/matcha-shaders', methods=['GET'])
+def shaders():
+    return render_template("shaders.html")
+
+@app.route('/matcha-shaders/download', methods=['GET'])
+def shaders_download():
+    return send_file("./matcha-shaders-v1.0.zip", as_attachment = True, \
+        attachment_filename = "matcha-shaders-v1.0.zip")
+
 @app.route('/upload', methods=['POST'])
 def upload(): 
     if 'file' not in flask.request.files:
