@@ -3,34 +3,35 @@
         <style>
         @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
-
-button {
-    /* 文字サイズを1.4emに指定 */
-    font-size: 1.4em;
-
-    /* 文字の太さをboldに指定 */
-    font-weight: bold;
-
-    /* 縦方向に10px、
-     * 横方向に30pxの余白を指定 */
-    padding: 10px 30px;
-
-    /* 背景色を濃い青色に指定 */
-    background-color: #248;
-
-    /* 文字色を白色に指定 */
+::selection {
+    background: #000;
     color: #fff;
+}
 
-    /* ボーダーをなくす */
-    border-style: none;
+//Firefox
+::-moz-selection {
+    background: #000;
+    color: #fff;
+}
+
+	
+button {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-left: solid 4px #668ad8;
+    border-right: solid 4px #668ad8;
+    color: #668ad8;
+    text-shadow: 0 0 5px white;
+    padding: 0.5em 1em;
+    background: repeating-linear-gradient(-45deg, #cce7ff, #cce7ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+    transition: .4s;
 }
 
 button:hover {
-    /* 背景色を明るい青色に指定 */
-    background-color: #24d;
-
-    /* 文字色を白色に指定 */
-    color: #fff;
+    background: repeating-linear-gradient(-45deg, #cce7ff, #cce7ff 5px,#e9f4ff 5px, #e9f4ff 9px);
 }
 
 *{
