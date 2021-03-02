@@ -1,8 +1,10 @@
 import json
 import urllib.request
+import datetime
 
 def ret_delay():
-	ret = '<h1>JR山陽神戸線 白陵関係路線遅延情報</h1> <a href="https://twitter.com/BOT43858908">Twitter</a> <table border="1"> <tr> <th>種別</th> <th>終点</th> <th>遅れ</th> <th>場所</th> </tr>'
+	dt = datetime.datetime.now()
+	ret = f'<h1>JR山陽神戸線 白陵関係路線遅延情報</h1> <h3>データ取得時刻: {dt.year}年{dt.month}月{dt.day}日{dt.hour}時{dt.minute}分{dt.second}秒</h3> <a href="https://twitter.com/BOT43858908">Twitter</a> <table border="1"> <tr> <th>種別</th> <th>終点</th> <th>遅れ</th> <th>場所</th> </tr>'
 	try:
 		url = 'https://www.train-guide.westjr.co.jp/api/v3/kobesanyo.json'
 		url_st = url.replace('.json','_st.json')
