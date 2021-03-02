@@ -22,7 +22,7 @@ def ret_delay():
 			if item['delayMinutes'] > 0:
 				stn = item['pos'].split('_')
 				try:
-					position = dictst[stn[0]] + '辺り'
+					position = dictst[stn[0]] + '駅'
 				except KeyError:
 					position = "特定失敗"
 				#print(item['displayType'], item['dest']['text'],'行き:',item['delayMinutes'],'分遅れ',position,'辺り')
