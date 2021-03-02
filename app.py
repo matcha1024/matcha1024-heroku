@@ -7,6 +7,7 @@ import flask
 import pretty_midi
 import shutil
 import mc_note_functionner
+import delay
 
 app = flask.Flask(__name__)
 
@@ -38,6 +39,11 @@ def upload():
     mc_note_functionner.create_function()
     return send_file("./note.zip", as_attachment = True, \
         attachment_filename = "note.zip")
+
+@app.route("/hr-delay")
+def hr_delay():
+	DELAY = delay.ret_delay()
+	return DELAY
 
 @app.errorhandler(404)
 def page_not_found(error):
