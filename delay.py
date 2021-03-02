@@ -2,7 +2,7 @@ import json
 import urllib.request
 
 def ret_delay():
-	ret = '<table border="1"> <tr> <th>種別</th> <th>終点</th> <th>遅れ</th> <th>場所</th> </tr>'
+	ret = '<h1>JR山陽神戸線 白陵関係路線遅延情報</h1> <table border="1"> <tr> <th>種別</th> <th>終点</th> <th>遅れ</th> <th>場所</th> </tr>'
 	try:
 		url = 'https://www.train-guide.westjr.co.jp/api/v3/kobesanyo.json'
 		url_st = url.replace('.json','_st.json')
