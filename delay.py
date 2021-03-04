@@ -4,7 +4,7 @@ import datetime
 
 def ret_delay():
 	dt = datetime.datetime.now()
-	ret = '<head> <title>白陵遅延情報</title> <style> table td {	background: #eee;} table tr:nth-child(odd) td {	background: #fff;}  </style> <meta http-equiv="refresh" content="60" > </head>'
+	ret = '<head> <title>白陵遅延情報</title> <style> table td {	background: #eee;} table tr:nth-child(odd) td {	background: #fff;}  </style> <meta http-equiv="refresh" content="60" > <meta name="keyword" content="白陵, 遅延, 登校情報, JR"> <meta name="description" content="白陵関係路線遅延情報を自動で取得します。"> </head>'
 	ret += f'<h1>JR山陽神戸線 白陵関係路線遅延情報</h1> <h3>データ取得時刻: <br>{dt.year}年{dt.month}月{dt.day}日 / {dt.hour} : {dt.minute} : {dt.second} </h3> <table border="1"> <tr> <th>種別</th> <th>終点</th> <th>遅れ</th> <th>場所</th> </tr>'
 	
 	is_delay = False
