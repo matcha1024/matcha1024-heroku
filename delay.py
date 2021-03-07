@@ -4,7 +4,7 @@ import datetime
 
 def ret_delay():
 	dt = datetime.datetime.now()
-	ret = '''<head> <title>白陵遅延情報</title> <style> table td {	background: #eee;} table tr:nth-child(odd) td {	background: #fff;} 
+	ret = '''<head> <title>白陵遅延情報</title> <link rel="icon" href="https://raw.githubusercontent.com/matcha1024/mc-note-functioner/master/favicon.ico"> <style> table td {	background: #eee;} table tr:nth-child(odd) td {	background: #fff;} 
 p {
   font-size: 16px;
   font-weight: bold;
