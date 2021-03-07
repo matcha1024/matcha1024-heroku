@@ -121,7 +121,7 @@ h1 {
 <div class="bg bg3"></div>
 <div class="content">
 	'''
-	ret += f'<h1>JR山陽神戸線 白陵関係路線遅延情報</h1> <h3>データ取得時刻: <br>{dt.year}年{dt.month}月{dt.day}日 / {dt.hour} : {dt.minute} : {dt.second} </h3> <table border="1" class="tbl-r03" align="center"> <tr> <th>種別</th> <th>終点</th> <th>遅れ</th> <th>場所</th> </tr>'
+	ret += f'<h1>JR山陽神戸線 白陵関係路線遅延情報</h1> <h3>データ取得時刻: {dt.year}年{dt.month}月{dt.day}日 / {dt.hour} : {dt.minute} : {dt.second} </h3> <table border="1" class="tbl-r03" align="center"> <tr> <th>種別</th> <th>終点</th> <th>遅れ</th> <th>場所</th> </tr>'
 	
 	is_delay = False
 	try:
