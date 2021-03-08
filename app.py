@@ -40,6 +40,29 @@ def upload():
     return send_file("./note.zip", as_attachment = True, \
         attachment_filename = "note.zip")
 
+@app.route("/hr-password", methods=['GET'])
+def hr_pass_get():
+	return '''
+	<form action="/hr-password" method="POST" enctype="multipart/form-data">
+	<div> <input type="password" id="pass" name="pass" placeholder="PASSWORD"> </div>
+	<div> <input type="submit" value="認証"> </div>
+	</form>
+	'''
+
+@app.route("/hr-password", methods=['POST'])
+def hr_pass_post():
+	pw = request.form['pass']
+	if(pw == "OkudairaIsGod"):
+		return redirect("/hr-delay")
+	else:
+		return '''
+		<p>パスワードが違います。</p>
+		<form action="/hr-password" method="POST" enctype="multipart/form-data">
+	<div> <input type="password" id="pass" name="pass" placeholder="PASSWORD"> </div>
+	<div> <input type="submit" value="認証"> </div>
+	</form>
+		'''
+
 @app.route("/hr-delay")
 def hr_delay():
 	DELAY = delay.ret_delay()
