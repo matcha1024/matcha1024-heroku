@@ -114,7 +114,9 @@ h1 {
     transform:translateX(25%);
   }
 }
-  </style> <meta http-equiv="refresh" content="60" > <meta name="keyword" content="白陵, 遅延, 登校情報, JR"> <meta name="description" content="白陵関係路線遅延情報を自動で取得します。"> </head>
+  </style> <meta http-equiv="refresh" content="60" > <meta name="keyword" content="白陵, 遅延, 登校情報, JR"> <meta name="description" content="白陵関係路線遅延情報を自動で取得します。">
+<meta name="google-site-verification" content="BhkJ87V6ssU9iwGwUQ6LhAN7D_HqfLZMOO0Pr4u1WQw" />
+   </head>
 
 <div class="bg"></div>
 <div class="bg bg2"></div>
