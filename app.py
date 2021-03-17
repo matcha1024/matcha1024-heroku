@@ -67,6 +67,10 @@ def hr_delay():
 	DELAY = delay.ret_delay()
 	return DELAY
 
+@app.route("/hr-delay-license")
+def hr_delay_license():
+	return render_template("hr-delay-license.html")
+
 
 @app.errorhandler(404)
 def page_not_found(error):
