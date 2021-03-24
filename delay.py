@@ -155,7 +155,7 @@ h1 {
 				#print(item['displayType'], item['dest']['text'],'行き:',item['delayMinutes'],'分遅れ',position,'辺り')
 				if(item["displayType"] == "普通" or item["displayType"] == "新快速"):
 					if(item["dest"]["text"] == "西明石" or item["dest"]["text"] == "野洲" or item["dest"]["text"] == "米原" or item["dest"]["text"] == "網干" or item["dest"]["text"] == "姫路"):
-						ret += "<tr> <td>" + item["displayType"] + "</td> <td>" + item["dest"]["text"] + "行き" + "</td> <td>" + str(item["delayMinutes"]) + "分" + "</td> <td>" + position + "</td> </tr>" + " <br>"
+						ret += "<tr> <td>" + item["displayType"] + "</td> <td>" + item["dest"]["text"] + "行き" + "</td> <td>" + str(item["delayMinutes"]) + "分" + "</td> <td>" + position + "</td> </tr>" + " "
 						is_delay = True
 
 	except urllib.error.HTTPError as err:
